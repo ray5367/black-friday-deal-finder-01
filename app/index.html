@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DealHound — Black Friday 2026 deal finder</title>
+<meta name="description" content="38 real Black Friday deals, checked 27 Nov 2026 at the store. Search and filter by category, store and discount.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1 class="brand">DealHound <em>· Black Friday 2026</em></h1>
+    <p class="tagline">Real deals, checked today — not list prices in a costume.</p>
+    <div class="stats">
+      <span id="stat-deals">— deals</span>
+      <span id="stat-best" class="hot">—</span>
+      <span id="stat-saved">—</span>
+      <span id="stat-lows">—</span>
+    </div>
+    <p id="checked-line">All prices checked 27 Nov 2026 — at the store, or in a deals source that names the store.</p>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="wrap">
+    <input type="search" id="f-q" placeholder="Search deals — try “airpods”, “tv”, “dyson”…" aria-label="Search deals">
+    <select id="f-cat" aria-label="Filter by category">
+      <option value="All">All categories</option>
+    </select>
+    <select id="f-store" aria-label="Filter by store">
+      <option value="All">All stores</option>
+    </select>
+    <select id="f-min" aria-label="Minimum discount">
+      <option value="0">Any discount</option>
+      <option value="20">20% off or more</option>
+      <option value="30">30% off or more</option>
+      <option value="40">40% off or more</option>
+      <option value="50">50% off or more</option>
+    </select>
+    <select id="f-sort" aria-label="Sort deals">
+      <option value="discount">Biggest % off first</option>
+      <option value="saving">Biggest $ saving first</option>
+      <option value="price">Lowest price first</option>
+      <option value="lows">Best verdict first</option>
+    </select>
+    <label class="check"><input type="checkbox" id="f-lows"> New lows only</label>
+    <button id="clear" type="button">Clear</button>
+  </div>
+</div>
+
+<main>
+  <p id="count">Loading deals…</p>
+  <section id="compare" aria-label="Same product at several stores"></section>
+  <div id="grid"></div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <h2>How these deals were checked</h2>
+    <p>Every price above was read on 27 November 2026, at the store itself or in a deals source that names the store. Each card says where its price was read and when. Discounts are computed from the sale price and the usual price shown — the “usual” is the list price unless the card says it is a 90-day average.</p>
+    <p>Black Friday prices move by the hour and stock runs out. Confirm the price at checkout before you buy. DealHound takes no commission and lists no sponsored placement; the order is by discount, saving, price or verdict — never by payment.</p>
+    <p>Sale windows: Amazon Black Friday Week runs 19–30 Nov; Best Buy’s Black Friday sale runs 19–28 Nov; Walmart’s Black Friday Deals run 23–29 Nov; Target’s event runs 22–29 Nov. Gift-card doorbusters are 27 Nov only.</p>
+  </div>
+</footer>
+
+<script src="deals.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
